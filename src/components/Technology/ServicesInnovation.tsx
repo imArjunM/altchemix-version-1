@@ -14,7 +14,7 @@ export const ServicesInnovation = () => {
   return (
     <section
       id='services-innovation'
-      className='section-padding bg-surface-soft scroll-mt-header'
+      className='section-padding-bottom bg-surface-soft scroll-mt-header'
     >
       <div className='container-custom'>
         {/* Header */}

@@ -11,6 +11,7 @@ import { Footer } from '@/components/Footer/Footer';
 import { MobileStickyCTA } from '@/components/MobileStickyCTA/MobileStickyCTA';
 import { AdditiveCapabilitiesSection } from '@/components/ProductGrid/AdditiveCapabilities';
 import { ServicesInnovation } from '@/components/Technology/ServicesInnovation';
+import { AboutUs } from '@/components/About/AboutUs';
 
 const Index = () => {
   return (
@@ -26,11 +27,14 @@ const Index = () => {
       <Header />
       <main id='main-content'>
         <Hero />
+
         <IndustryBrowser />
         <ProductGrid />
         <AdditiveCapabilitiesSection />
         <ServicesInnovation />
+        <AboutUs />
         <Trust />
+
         {/* <Resources />
         <Sustainability /> */}
         <Contact />
