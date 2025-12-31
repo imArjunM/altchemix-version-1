@@ -44,7 +44,7 @@ const capabilities = [
 
 export const Technology = () => {
   return (
-    <section id="technology" className="section-padding bg-surface-soft scroll-mt-header">
+    <section id="technology" className="section-padding-bottom bg-surface-soft scroll-mt-header">
       <div className="container-custom">
         {/* Section Header */}
         <motion.div
