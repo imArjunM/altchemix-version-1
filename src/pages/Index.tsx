@@ -10,6 +10,7 @@ import { Contact } from '@/components/Contact/Contact';
 import { Footer } from '@/components/Footer/Footer';
 import { MobileStickyCTA } from '@/components/MobileStickyCTA/MobileStickyCTA';
 import { AdditiveCapabilitiesSection } from '@/components/ProductGrid/AdditiveCapabilities';
+import { ServicesInnovation } from '@/components/Technology/ServicesInnovation';
 
 const Index = () => {
   return (
@@ -28,7 +29,7 @@ const Index = () => {
         <IndustryBrowser />
         <ProductGrid />
         <AdditiveCapabilitiesSection />
-        <Technology />
+        <ServicesInnovation />
         <Trust />
         {/* <Resources />
         <Sustainability /> */}
