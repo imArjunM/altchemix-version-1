@@ -31,18 +31,9 @@ const industries: Industry[] = [
     image:
       'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80',
     description:
-      'Our packaging masterbatches are engineered for regulatory compliance and brand consistency. From transparent clarifiers to vibrant colours, we deliver solutions that meet the demanding requirements of food-contact applications while supporting your sustainability goals with PCR-compatible formulations.',
+      'Enhancing visual appeal, compliance, barrier properties, and processing efficiency—while supporting recyclability and sustainability goals.',
   },
-  {
-    id: 'pipes',
-    icon: Droplets,
-    title: 'Pipes & Agriculture',
-    subtitle: 'Infrastructure & irrigation systems',
-    image:
-      'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80',
-    description:
-      'Pipes and agricultural applications demand exceptional durability. Our UV stabilizers and carbon black masterbatches are formulated for 50+ year lifespans, meeting stringent infrastructure standards while reducing maintenance costs.',
-  },
+
   {
     id: 'wire-cable',
     icon: Zap,
@@ -52,7 +43,7 @@ const industries: Industry[] = [
     image:
       'https://images.unsplash.com/photo-1584809923235-fabdba83d1df?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     description:
-      'Our wire and cable masterbatches meet the most stringent fire safety and electrical performance standards. We offer comprehensive colour coding systems and flame retardant packages that comply with international regulations.',
+      'Masterbatches engineered for superior insulation, durability, and electrical performance in demanding environments.',
   },
   {
     id: 'fibers',
@@ -62,17 +53,17 @@ const industries: Industry[] = [
     image:
       'https://images.unsplash.com/photo-1558171813-4c088753af8f?auto=format&fit=crop&w=800&q=80',
     description:
-      'From athletic wear to automotive textiles, our fiber-grade masterbatches deliver exceptional colour fastness and functional performance. Our spun-dye technology reduces water consumption by up to 90% compared to traditional dyeing.',
+      'Color-stable solutions with controlled migration and consistent fiber performance for fashion and technical applications.',
   },
   {
-    id: 'healthcare',
-    icon: Heart,
-    title: 'Healthcare',
-    subtitle: 'Medical devices & pharmaceutical',
+    id: 'pipes',
+    icon: Droplets,
+    title: 'Pipes & Agriculture',
+    subtitle: 'Infrastructure & irrigation systems',
     image:
-      'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800&h=600&fit=crop',
+      'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80',
     description:
-      'Healthcare applications require the highest quality and regulatory compliance. Our medical-grade masterbatches are manufactured in dedicated clean-room facilities with complete traceability and documentation.',
+      'UV-stable formulations for films, pipes, nets, and greenhouse applications—built to withstand harsh conditions and extend product life.',
   },
   {
     id: 'appliances',
@@ -82,17 +73,28 @@ const industries: Industry[] = [
     image:
       'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=800&q=80',
     description:
-      'Appliance manufacturers trust our masterbatches for premium aesthetics and durability. We offer a wide range of special effects including metallics, pearlescents, and soft-touch additives.',
+      'High-performance aesthetics combined with scratch resistance, thermal stability, and long-lasting durability.',
   },
   {
-    id: 'custom',
+    id: 'healthcare',
+    icon: Heart,
+    title: 'Healthcare',
+    subtitle: 'Medical devices & pharmaceutical',
+    image:
+      'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800&h=600&fit=crop',
+    description:
+      'Medical-grade solutions developed to meet global safety and compliance standards for critical applications.',
+  },
+
+  {
+    id: 'automotive',
     icon: Settings,
-    title: 'Custom OEM',
+    title: 'Automotive',
     subtitle: 'Tailored solutions for your needs',
     image:
       'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=800&q=80',
     description:
-      'Our technical team works directly with your engineers to develop custom masterbatch solutions. From concept to commercialization, we provide comprehensive support including pilot trials and application testing.',
+      'Advanced masterbatch and additive solutions engineered for high-performance automotive applications—delivering superior aesthetics, thermal stability, UV resistance, and functional enhancements for interior and exterior components. Designed to meet global safety standards while supporting lightweighting and sustainability goals.',
   },
 ];
 
@@ -232,8 +234,22 @@ export const IndustryBrowser = () => {
                   {activeIndustry.title}
                 </motion.h3>
 
-                {/* Expandable Description */}
                 <AnimatePresence>
+                
+                    <motion.p
+                      initial={{ opacity: 0, height: 0, marginBottom: 0 }}
+                      animate={{ opacity: 1, height: 'auto', marginBottom: 16 }}
+                      exit={{ opacity: 0, height: 0, marginBottom: 0 }}
+                      transition={{ duration: 0.35, ease: easePremium }}
+                      className='text-primary-foreground/90 text-base lg:text-lg leading-relaxed overflow-hidden'
+                    >
+                      {activeIndustry.description}
+                    </motion.p>
+                 
+                </AnimatePresence>
+
+                {/* Expandable Description */}
+                {/* <AnimatePresence>
                   {isExpanded && (
                     <motion.p
                       initial={{ opacity: 0, height: 0, marginBottom: 0 }}
@@ -245,10 +261,10 @@ export const IndustryBrowser = () => {
                       {activeIndustry.description}
                     </motion.p>
                   )}
-                </AnimatePresence>
+                </AnimatePresence> */}
 
                 {/* Learn More / Show Less Button */}
-                <motion.button
+                {/* <motion.button
                   onClick={() => setIsExpanded(!isExpanded)}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -265,7 +281,7 @@ export const IndustryBrowser = () => {
                   >
                     <ChevronDown className='w-4 h-4' />
                   </motion.div>
-                </motion.button>
+                </motion.button> */}
               </div>
 
               {/* Animated border glow on hover */}

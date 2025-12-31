@@ -30,9 +30,9 @@ interface Product {
 const products: Product[] = [
   {
     id: 'colour',
-    title: 'Colour Masterbatch',
+    title: 'Color Masterbatches',
     description:
-      'Precision-matched custom colours with exceptional dispersion and consistency.',
+      'Deliver vibrant, consistent pigments with superior dispersion and long-lasting stability—bringing life and precision to every application.',
     image:
       'https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?auto=format&fit=crop&w=600&q=80',
     tags: [
@@ -40,7 +40,7 @@ const products: Product[] = [
       { icon: Sun, label: 'UV Stable' },
     ],
     fullDescription:
-      'Our colour masterbatches are engineered for superior dispersion and colour consistency across all polymer systems.',
+      'Deliver vibrant, consistent pigments with superior dispersion and long-lasting stability—bringing life and precision to every application.',
     applications: [
       'Packaging films',
       'Injection moulding',
@@ -56,10 +56,10 @@ const products: Product[] = [
     style: 'default',
   },
   {
-    id: 'white',
-    title: 'White Masterbatch',
+    id: 'smart',
+    title: 'Smart Masterbatches',
     description:
-      'High opacity titanium dioxide formulations for brilliant whiteness.',
+      'Innovative blends of color and functional additives designed to serve specific purposes—combining aesthetics with performance in one solution.',
     // image: 'https://images.unsplash.com/photo-553531384-397c80973a0b?auto=format&fit=crop&w=600&q=80',
     image: `https://plus.unsplash.com/premium_photo-1681426319710-e284eab20c36?q=80&w=1025&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D`,
     tags: [
@@ -67,7 +67,7 @@ const products: Product[] = [
       { icon: Recycle, label: 'PCR Compatible' },
     ],
     fullDescription:
-      'Premium white masterbatches featuring rutile TiO2 for maximum opacity and brightness.',
+      'Innovative blends of color and functional additives designed to serve specific purposes—combining aesthetics with performance in one solution.',
     applications: [
       'Food packaging',
       'Personal care',
@@ -84,9 +84,9 @@ const products: Product[] = [
   },
   {
     id: 'black',
-    title: 'Black Masterbatch',
+    title: 'Specialty Black Masterbatches',
     description:
-      'Carbon black formulations for UV protection and aesthetic applications.',
+      'Deep, rich blacks with exceptional opacity, conductivity options, and superior thermal stability—engineered for demanding applications.',
     image:
       'https://images.unsplash.com/photo-1618397746666-63405ce5d015?auto=format&fit=crop&w=600&q=80',
     tags: [
@@ -94,7 +94,7 @@ const products: Product[] = [
       { icon: Shield, label: 'Weathering Resistant' },
     ],
     fullDescription:
-      'High-performance black masterbatches formulated with select carbon blacks for optimal UV protection.',
+      'Deep, rich blacks with exceptional opacity, conductivity options, and superior thermal stability—engineered for demanding applications.',
     applications: [
       'Pipes & profiles',
       'Geomembranes',
@@ -113,14 +113,14 @@ const products: Product[] = [
     id: 'additives',
     title: 'Additive Masterbatches',
     description:
-      'Functional additives for enhanced performance and processing capabilities.',
+      'Engineered to enhance functionality, durability, and sustainability—our additive solutions transform ordinary plastics into extraordinary materials for real-world challenges.',
     image: pelletsMacro,
     tags: [
       { icon: Flame, label: 'Flame Retardant' },
       { icon: Shield, label: 'Antimicrobial' },
     ],
     fullDescription:
-      'Comprehensive range of additive masterbatches including UV stabilizers, antioxidants, and flame retardants.',
+      'Engineered to enhance functionality, durability, and sustainability—our additive solutions transform ordinary plastics into extraordinary materials for real-world challenges.',
     applications: [
       'All polymer systems',
       'Multi-functional packages',
@@ -368,9 +368,7 @@ const ProductBentoCard = ({
       className={`group cursor-pointer relative rounded-lg overflow-hidden shadow-premium hover:shadow-premium-xl transition-all duration-300 ${
         isWide ? 'md:col-span-1' : ''
       } ${
-        product.style === 'featured'
-          ? 'from-cta/5 to-primary/5'
-          : 'bg-card'
+        product.style === 'featured' ? 'from-cta/5 to-primary/5' : 'bg-card'
       }`}
     >
       {/* Image Container */}
